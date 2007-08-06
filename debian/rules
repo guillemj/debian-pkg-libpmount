@@ -1,11 +1,9 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
 # Sample debian/rules that uses debhelper.
 # GNU copyright 1997 to 1999 by Joey Hess.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
-
 
 CFLAGS = -Wall -g
 
@@ -15,76 +13,50 @@ else
 	CFLAGS += -O2
 endif
 
-# shared library versions, option 1
 version=`head -n 1 debian/changelog | cut -d '(' -f 2- | cut -d ')' -f 1`
 soname=`echo $$version | cut -d . -f -2`
 
-configure: configure-stamp
-configure-stamp:
+build:
 	dh_testdir
-	# Add here commands to configure the package.
-
-	touch configure-stamp
-
-
-build: build-stamp
-build-stamp: configure-stamp 
-	dh_testdir
-
-	# Add here commands to compile the package.
-	CFLAGS="$(CFLAGS)" ./bashfile build
-
-	touch build-stamp
+	
+	$(MAKE) build CFLAGS="$(CFLAGS)"
 
 clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
-
-	# Add here commands to clean up after the build process.
-	-./bashfile clean
-
-	dh_clean 
+	
+	-$(MAKE) clean
+	
+	dh_clean
 
 install: build
 	dh_testdir
 	dh_testroot
-	dh_clean -k 
+	dh_clean -k
 	dh_installdirs
+	
+	$(MAKE) install DESTDIR="$(CURDIR)/debian/tmp"
 
-	# Add here commands to install the package into debian/tmp
-	DESTDIR=$(CURDIR)/debian/tmp ./bashfile install
-
-
-# Build architecture-independent files here.
 binary-indep: build install
-# We have nothing to do by default.
+# Nothing to do
 
-# Build architecture-dependent files here.
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs 
+	dh_installchangelogs
 	dh_installdocs
 	dh_installexamples
 	dh_movefiles
 #	dh_install
-#	dh_installmenu
-#	dh_installdebconf	
-#	dh_installlogrotate
-#	dh_installemacsen
-#	dh_installpam
-#	dh_installmime
+#	dh_installdebconf
 #	dh_installinit
-#	dh_installcron
 #	dh_installinfo
 	dh_installman
 	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
-#	dh_perl
-#	dh_python
 	dh_makeshlibs -V "libpmount$(soname) (>= $(version))"
 	dh_installdeb
 	dh_shlibdeps
@@ -93,4 +65,6 @@ binary-arch: build install
 	dh_builddeb
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure
+
+.PHONY: build clean binary-indep binary-arch binary install
+

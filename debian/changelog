@@ -1,3 +1,15 @@
+libpmount (0.0.6) unstable; urgency=low
+
+  * New Maintainer.
+  * Rewrite package short description.
+  * Clean debian/copyright.
+  * Clean debian/rules.
+  * Bump Standars-Version to 3.6.1 (no changes needed).
+  * Rewrite bashfile to Makefile.
+  * Remove Build-Depends on Essential e2fsprogs package.
+
+ -- Guillem Jover <guillem@debian.org>  Sun,  5 Jun 2005 16:42:48 +0300
+
 libpmount (0.0.5) unstable; urgency=low
 
   * rules: Disable testsuite.  (Closes: #291269)
