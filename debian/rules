@@ -13,8 +13,8 @@ else
 	CFLAGS += -O2
 endif
 
-version=`head -n 1 debian/changelog | cut -d '(' -f 2- | cut -d ')' -f 1`
-soname=`echo $$version | cut -d . -f -2`
+version := $(shell dpkg-parsechangelog | sed -ne 's,^Version: ,,p' )
+soversion := $(shell echo $(version) | cut -d. -f-2 )
 
 build:
 	dh_testdir
@@ -24,9 +24,8 @@ build:
 clean:
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp configure-stamp
 	
-	-$(MAKE) clean
+	$(MAKE) clean
 	
 	dh_clean
 
@@ -47,17 +46,13 @@ binary-arch: build install
 	dh_installchangelogs
 	dh_installdocs
 	dh_installexamples
-	dh_movefiles
-#	dh_install
-#	dh_installdebconf
-#	dh_installinit
-#	dh_installinfo
+	dh_install --sourcedir="$(CURDIR)/debian/tmp"
 	dh_installman
 	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
-	dh_makeshlibs -V "libpmount$(soname) (>= $(version))"
+	dh_makeshlibs -V "libpmount$(soversion) (>= $(version))"
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol

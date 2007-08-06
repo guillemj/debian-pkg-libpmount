@@ -1,3 +1,18 @@
+libpmount (0.0.9) unstable; urgency=low
+
+  * Use dh_install instead of dh_movefiles.
+    - Rename libpmount-dev.files to libmount-dev.install
+    - Rename libpmount0.0.files to libpmount0.0.install.
+  * Remove commented out dh_installdebconf, dh_installinit and dh_installinfo.
+  * Do not ignore make errors from on clean target.
+  * Use dpkg-parsechangelog instead of manually parsing the changelog to get
+    the current upstream version.
+  * Use binary:Version instead of deprecated Source-Version substvar.
+  * Do not remove non-existent stamp files.
+  * Remove useless libpmount0.0.shlibs file.
+
+ -- Guillem Jover <guillem@debian.org>  Tue, 07 Aug 2007 02:25:30 +0300
+
 libpmount (0.0.8) unstable; urgency=low
 
   * Now using Standars-Version 3.7.2 (no changes needed).

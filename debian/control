@@ -8,7 +8,7 @@ Standards-Version: 3.7.2
 Package: libpmount-dev
 Section: libdevel
 Architecture: any
-Depends: libpmount0.0 (= ${Source-Version})
+Depends: libpmount0.0 (= ${binary:Version})
 Description: portable mount library - development files
  This library implements functions pmount() and pumount() as wrappers to
  the real mount/unmount unportable interfaces on each platform.
