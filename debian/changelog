@@ -1,0 +1,38 @@
+libpmount (0.0.5) unstable; urgency=low
+
+  * rules: Disable testsuite.  (Closes: #291269)
+
+ -- Robert Millan <rmh@debian.org>  Thu, 20 Jan 2005 00:23:52 +0100
+
+libpmount (0.0.4) unstable; urgency=low
+
+  * Disabled code (needs more debugging):
+    - src/*: Handle options field in mtab.
+    - src/*: When asked to mount real files, attempt to use loop devices.
+  * Updated kFreeBSD support.
+
+ -- Robert Millan <rmh@debian.org>  Fri, 16 Jul 2004 12:00:47 +0200
+
+libpmount (0.0.3) unstable; urgency=low
+
+  * src/*: Implement mtab handling.
+  * bashfile: Build with -Werror.
+  * debian/rules: Generate $version automagicaly.
+
+ -- Robert Millan <rmh@debian.org>  Wed, 14 Jul 2004 18:51:01 +0200
+
+libpmount (0.0.2) unstable; urgency=low
+
+  * bashfile: Fix library building for compliance with Policy sections
+    8 and 10.2 (Closes: #257907)
+  * bashfile: Implement target dependencies.
+  * debian/control (Build-Depends): Nuked linux-gnu | kfreebsd-gnu.
+
+ -- Robert Millan <rmh@debian.org>  Tue,  6 Jul 2004 18:54:21 +0200
+
+libpmount (0.0.1) unstable; urgency=low
+
+  * Initial Release. (Closes: #255716)
+
+ -- Robert Millan <rmh@debian.org>  Mon, 21 Jun 2004 14:15:24 +0200
+

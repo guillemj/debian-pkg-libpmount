@@ -1,0 +1,34 @@
+Source: libpmount
+Priority: optional
+Section: libs
+Maintainer: Robert Millan <rmh@debian.org>
+Build-Depends: debhelper (>= 4.0.0), e2fsprogs
+Standards-Version: 3.6.0
+
+Package: libpmount-dev
+Section: libdevel
+Architecture: any
+Depends: libpmount0.0 (= ${Source-Version})
+Description: Portable mount library, development files
+ This library implements functions pmount() and pumount() as wrappers to the
+ real mount/unmount unportable interfaces on each platform.
+ .
+ Its goal is to provide a consistent interface application programmers can
+ rely on for mounting and umounting filesystems without having to address
+ kernel-related portability problems.
+ .
+ This package contains the static object and header files of libpmount.
+
+Package: libpmount0.0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Portable mount library, shared object
+ This library implements functions pmount() and pumount() as wrappers to the
+ real mount/unmount unportable interfaces on each platform.
+ .
+ Its goal is to provide a consistent interface application programmers can
+ rely on for mounting and umounting filesystems without having to address
+ kernel-related portability problems.
+ .
+ This package contains the libpmount shared object.
