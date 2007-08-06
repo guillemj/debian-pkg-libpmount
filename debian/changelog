@@ -1,3 +1,11 @@
+libpmount (0.0.8) unstable; urgency=low
+
+  * Now using Standars-Version 3.7.2 (no changes needed).
+  * Switched to debhelper compat level 5.
+  * Update FSF's address.
+
+ -- Guillem Jover <guillem@debian.org>  Sun,  6 Aug 2006 03:44:52 +0300
+
 libpmount (0.0.7) unstable; urgency=low
 
   * Reintroduce missing symbols. (Closes: #323338)
