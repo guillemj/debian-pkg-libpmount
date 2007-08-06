@@ -1,10 +1,22 @@
+libpmount (0.0.7) unstable; urgency=low
+
+  * Reintroduce missing symbols. (Closes: #323338)
+  * Fix testsuite generation and generalize them by moving away from shell
+    script files to a proper Makefile and a C source file. (Closes: #323339)
+  * Use loop devices on linux if trying to mount a file image.
+  * Make static internal functions __findloop, __getloop and __clrloop.
+  * Switched to versioned symbols.
+  * Now using Standars-Version 3.6.2 (no changes needed).
+
+ -- Guillem Jover <guillem@debian.org>  Sun, 21 Aug 2005 09:37:41 +0300
+
 libpmount (0.0.6) unstable; urgency=low
 
   * New Maintainer.
   * Rewrite package short description.
   * Clean debian/copyright.
   * Clean debian/rules.
-  * Bump Standars-Version to 3.6.1 (no changes needed).
+  * Now using Standars-Version 3.6.1 (no changes needed).
   * Rewrite bashfile to Makefile.
   * Remove Build-Depends on Essential e2fsprogs package.
 
