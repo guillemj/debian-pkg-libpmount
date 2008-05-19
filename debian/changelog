@@ -1,6 +1,7 @@
 libpmount (0.0.10) UNRELEASED; urgency=low
 
   * Do not strip the shared library in Makefile. (Closes: #437397)
+  * Now using Standars-Version 3.7.3 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Mon, 19 May 2008 05:38:06 +0300
 
