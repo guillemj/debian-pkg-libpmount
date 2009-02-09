@@ -2,7 +2,7 @@ Source: libpmount
 Priority: optional
 Section: libs
 Maintainer: Guillem Jover <guillem@debian.org>
-Build-Depends: debhelper (>= 5)
+Build-Depends: debhelper (>= 7)
 Standards-Version: 3.7.3
 
 Package: libpmount-dev
