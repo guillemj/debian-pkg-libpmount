@@ -4,6 +4,8 @@ libpmount (0.0.11) UNRELEASED; urgency=low
   * Use dh_prep instead of “dh_clean -k”.
   * Now using Standards-Version 3.8.0 (no changes needed).
   * Use UTF-8 copyright symbol.
+  * Get the default shlibs file dependency by not giving any argument to
+    dh_makeshlibs -V option.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 22:14:00 +0200
 

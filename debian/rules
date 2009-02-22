@@ -13,9 +13,6 @@ else
 	CFLAGS += -O2
 endif
 
-version := $(shell dpkg-parsechangelog | sed -ne 's,^Version: ,,p' )
-soversion := $(shell echo $(version) | cut -d. -f-2 )
-
 build:
 	dh_testdir
 	
@@ -52,7 +49,7 @@ binary-arch: build install
 	dh_strip
 	dh_compress
 	dh_fixperms
-	dh_makeshlibs -V "libpmount$(soversion) (>= $(version))"
+	dh_makeshlibs -V
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
