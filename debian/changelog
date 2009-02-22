@@ -18,7 +18,7 @@ libpmount (0.0.11) unstable; urgency=low
 libpmount (0.0.10) unstable; urgency=low
 
   * Do not strip the shared library in Makefile. (Closes: #437397)
-  * Now using Standars-Version 3.7.3 (no changes needed).
+  * Now using Standards-Version 3.7.3 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Mon, 19 May 2008 06:09:07 +0300
 
@@ -39,7 +39,7 @@ libpmount (0.0.9) unstable; urgency=low
 
 libpmount (0.0.8) unstable; urgency=low
 
-  * Now using Standars-Version 3.7.2 (no changes needed).
+  * Now using Standards-Version 3.7.2 (no changes needed).
   * Switched to debhelper compat level 5.
   * Update FSF's address.
 
@@ -53,7 +53,7 @@ libpmount (0.0.7) unstable; urgency=low
   * Use loop devices on linux if trying to mount a file image.
   * Make static internal functions __findloop, __getloop and __clrloop.
   * Switched to versioned symbols.
-  * Now using Standars-Version 3.6.2 (no changes needed).
+  * Now using Standards-Version 3.6.2 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Sun, 21 Aug 2005 09:37:41 +0300
 
@@ -63,7 +63,7 @@ libpmount (0.0.6) unstable; urgency=low
   * Rewrite package short description.
   * Clean debian/copyright.
   * Clean debian/rules.
-  * Now using Standars-Version 3.6.1 (no changes needed).
+  * Now using Standards-Version 3.6.1 (no changes needed).
   * Rewrite bashfile to Makefile.
   * Remove Build-Depends on Essential e2fsprogs package.
 
