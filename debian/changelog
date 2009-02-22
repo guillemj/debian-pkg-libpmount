@@ -6,6 +6,7 @@ libpmount (0.0.11) UNRELEASED; urgency=low
   * Cleanup debian/copyright:
     - Use UTF-8 copyright symbol.
     - Lower case «Maintained by».
+    - Refer to LGPL 2.1 instead of LGPL 2.
   * Get the default shlibs file dependency by not giving any argument to
     dh_makeshlibs -V option.
   * Add a symbols file for libpmount0.0.
