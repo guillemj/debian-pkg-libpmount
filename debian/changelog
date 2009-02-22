@@ -1,4 +1,4 @@
-libpmount (0.0.11) UNRELEASED; urgency=low
+libpmount (0.0.11) unstable; urgency=low
 
   * Switch to debhelper compatibility level 7.
   * Use dh_prep instead of “dh_clean -k”.
@@ -13,7 +13,7 @@ libpmount (0.0.11) UNRELEASED; urgency=low
     dh_makeshlibs -V option.
   * Add a symbols file for libpmount0.0.
 
- -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 22:14:00 +0200
+ -- Guillem Jover <guillem@debian.org>  Sun, 22 Feb 2009 04:37:46 +0200
 
 libpmount (0.0.10) unstable; urgency=low
 
