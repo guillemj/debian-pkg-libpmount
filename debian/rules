@@ -37,7 +37,7 @@ install: build
 binary-indep:
 # Nothing to do
 
-binary-arch: build install
+binary-arch: install
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs -s
