@@ -34,7 +34,7 @@ install: build
 	
 	$(MAKE) install DESTDIR="$(CURDIR)/debian/tmp"
 
-binary-indep: build install
+binary-indep:
 # Nothing to do
 
 binary-arch: build install

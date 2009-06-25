@@ -5,6 +5,7 @@ libpmount (0.0.12) UNRELEASED; urgency=low
     --sourcedir to dh_install.
   * Pass -s to arch dependent debhelper commands.
   * Now using Standards-Version 3.8.2 (no changes needed).
+  * Remove dependencies from binary-indep target.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 25 Jun 2009 13:21:04 +0200
 
