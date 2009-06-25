@@ -1,4 +1,4 @@
-libpmount (0.0.12) UNRELEASED; urgency=low
+libpmount (0.0.12) unstable; urgency=low
 
   * Workaround debhelper compat v7 bug (#534565) in dh_install which makes
     files end up under /debian/tmp/ in the binary package, by not passing
@@ -8,7 +8,7 @@ libpmount (0.0.12) UNRELEASED; urgency=low
   * Remove dependencies from binary-indep target.
   * Remove redundant build dependency from binary-arch target.
 
- -- Guillem Jover <guillem@debian.org>  Thu, 25 Jun 2009 13:21:04 +0200
+ -- Guillem Jover <guillem@debian.org>  Thu, 25 Jun 2009 14:03:34 +0200
 
 libpmount (0.0.11) unstable; urgency=low
 
