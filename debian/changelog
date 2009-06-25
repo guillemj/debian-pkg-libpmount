@@ -1,3 +1,11 @@
+libpmount (0.0.12) UNRELEASED; urgency=low
+
+  * Workaround debhelper compat v7 bug (#534565) in dh_install which makes
+    files end up under /debian/tmp/ in the binary package, by not passing
+    --sourcedir to dh_install.
+
+ -- Guillem Jover <guillem@debian.org>  Thu, 25 Jun 2009 13:21:04 +0200
+
 libpmount (0.0.11) unstable; urgency=low
 
   * Switch to debhelper compatibility level 7.
