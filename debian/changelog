@@ -1,3 +1,9 @@
+libpmount (0.0.13) UNRELEASED; urgency=low
+
+  * Switch to source format “3.0 (native)”.
+
+ -- Guillem Jover <guillem@debian.org>  Tue, 04 May 2010 16:55:09 +0200
+
 libpmount (0.0.12) unstable; urgency=low
 
   * Workaround debhelper compat v7 bug (#534565) in dh_install which makes
