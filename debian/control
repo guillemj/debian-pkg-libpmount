@@ -8,7 +8,7 @@ Standards-Version: 3.8.4
 Package: libpmount-dev
 Section: libdevel
 Architecture: any
-Depends: libpmount0.0 (= ${binary:Version})
+Depends: libpmount0.0 (= ${binary:Version}), ${misc:Depends}
 Description: portable mount library - development files
  This library implements functions pmount() and pumount() as wrappers to
  the real mount/unmount unportable interfaces on each platform.
@@ -22,7 +22,7 @@ Description: portable mount library - development files
 Package: libpmount0.0
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: portable mount library - shared library
  This library implements functions pmount() and pumount() as wrappers to
  the real mount/unmount unportable interfaces on each platform.
