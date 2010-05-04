@@ -3,7 +3,7 @@ Priority: optional
 Section: libs
 Maintainer: Guillem Jover <guillem@debian.org>
 Build-Depends: debhelper (>= 7)
-Standards-Version: 3.8.2
+Standards-Version: 3.8.4
 
 Package: libpmount-dev
 Section: libdevel
