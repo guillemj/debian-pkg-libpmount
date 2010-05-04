@@ -1,4 +1,4 @@
-libpmount (0.0.13) UNRELEASED; urgency=low
+libpmount (0.0.13) unstable; urgency=low
 
   * Switch to source format “3.0 (native)”.
   * Now using Standards-Version 3.8.4 (no changes needed).
@@ -6,7 +6,7 @@ libpmount (0.0.13) UNRELEASED; urgency=low
   * Remove duplicate from source Section field in libpmount0.0 binary stanza.
   * Add Vcs-Browser and Vcs-Git fields.
 
- -- Guillem Jover <guillem@debian.org>  Tue, 04 May 2010 16:55:09 +0200
+ -- Guillem Jover <guillem@debian.org>  Tue, 04 May 2010 17:06:11 +0200
 
 libpmount (0.0.12) unstable; urgency=low
 
