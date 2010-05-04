@@ -2,6 +2,8 @@ Source: libpmount
 Priority: optional
 Section: libs
 Maintainer: Guillem Jover <guillem@debian.org>
+Vcs-Browser: http://git.hadrons.org/?p=libpmount.git
+Vcs-Git: git://git.hadrons.org/git/libpmount.git
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.4
 

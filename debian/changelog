@@ -4,6 +4,7 @@ libpmount (0.0.13) UNRELEASED; urgency=low
   * Now using Standards-Version 3.8.4 (no changes needed).
   * Add ${misc:Depends} to all Depends fields.
   * Remove duplicate from source Section field in libpmount0.0 binary stanza.
+  * Add Vcs-Browser and Vcs-Git fields.
 
  -- Guillem Jover <guillem@debian.org>  Tue, 04 May 2010 16:55:09 +0200
 
