@@ -62,4 +62,3 @@ binary-arch: install-arch
 binary: binary-indep binary-arch
 
 .PHONY: binary-indep binary-arch binary
-

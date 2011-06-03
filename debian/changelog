@@ -139,4 +139,3 @@ libpmount (0.0.1) unstable; urgency=low
   * Initial Release. (Closes: #255716)
 
  -- Robert Millan <rmh@debian.org>  Mon, 21 Jun 2004 14:15:24 +0200
-
