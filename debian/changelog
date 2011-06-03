@@ -1,6 +1,7 @@
 libpmount (0.0.14) UNRELEASED; urgency=low
 
   * Switch the symbols file to use symver tags instead of symbol patterns.
+  * Now using Standards-Version 3.9.2 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Tue, 31 May 2011 09:24:44 +0200
 

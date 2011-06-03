@@ -5,7 +5,7 @@ Maintainer: Guillem Jover <guillem@debian.org>
 Vcs-Browser: http://git.hadrons.org/?p=libpmount.git
 Vcs-Git: git://git.hadrons.org/git/libpmount.git
 Build-Depends: debhelper (>= 7)
-Standards-Version: 3.8.4
+Standards-Version: 3.9.2
 
 Package: libpmount-dev
 Section: libdevel
