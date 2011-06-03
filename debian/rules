@@ -9,11 +9,15 @@ CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS)
 CFLAGS := -Wall $(shell dpkg-buildflags --get CFLAGS)
 LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS)
 
-build:
+build-indep:
+
+build-arch:
 	dh_testdir
 	
 	$(MAKE) build \
 	  CPPFLAGS="$(CPPFLAGS)" CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
+
+build: build-indep build-arch
 
 clean:
 	dh_testdir
@@ -23,7 +27,7 @@ clean:
 	
 	dh_clean
 
-install: build
+install-arch: build-arch
 	dh_testdir
 	dh_testroot
 	dh_prep
@@ -31,10 +35,12 @@ install: build
 	
 	$(MAKE) install DESTDIR="$(CURDIR)/debian/tmp"
 
+.PHONY: build-indep build-arch build install-arch clean
+
 binary-indep:
 # Nothing to do
 
-binary-arch: install
+binary-arch: install-arch
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs -s
@@ -55,5 +61,5 @@ binary-arch: install
 
 binary: binary-indep binary-arch
 
-.PHONY: build clean binary-indep binary-arch binary install
+.PHONY: binary-indep binary-arch binary
 
