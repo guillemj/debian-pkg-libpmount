@@ -5,18 +5,15 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-CFLAGS = -Wall -g
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-else
-	CFLAGS += -O2
-endif
+CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS := -Wall $(shell dpkg-buildflags --get CFLAGS)
+LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS)
 
 build:
 	dh_testdir
 	
-	$(MAKE) build CFLAGS="$(CFLAGS)"
+	$(MAKE) build \
+	  CPPFLAGS="$(CPPFLAGS)" CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 
 clean:
 	dh_testdir
