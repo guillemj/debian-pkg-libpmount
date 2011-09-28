@@ -1,0 +1,7 @@
+files
+*.log
+*.debhelper
+*.substvars
+tmp/
+libpmount-dev/
+libpmount0.0/
