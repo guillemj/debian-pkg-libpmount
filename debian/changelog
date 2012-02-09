@@ -1,3 +1,9 @@
+libpmount (0.0.16) unstable; urgency=low
+
+  * Do not use MNT_NODEV which was removed on kFreeBSD 7.0. Closes: #659280
+
+ -- Guillem Jover <guillem@debian.org>  Thu, 09 Feb 2012 21:49:07 +0100
+
 libpmount (0.0.15) unstable; urgency=low
 
   * Use a format string on fprintf() instead of directly using a string
