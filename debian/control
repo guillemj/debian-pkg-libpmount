@@ -4,6 +4,7 @@ Section: libs
 Maintainer: Guillem Jover <guillem@debian.org>
 Vcs-Browser: http://git.hadrons.org/?p=libpmount.git
 Vcs-Git: git://git.hadrons.org/git/libpmount.git
+Homepage: http://www.hadrons.org/software/libpmount/
 Build-Depends: dpkg-dev (>= 1.15.7), debhelper (>= 9), genisoimage
 Standards-Version: 3.9.6
 
