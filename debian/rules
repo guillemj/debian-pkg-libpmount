@@ -5,6 +5,7 @@
 
 DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS)
 CFLAGS := -Wall $(shell dpkg-buildflags --get CFLAGS)
@@ -28,7 +29,7 @@ config.status: configure
 	  $(confflags) \
 	  --disable-silent-rules \
 	  --prefix=/usr \
-	  --libdir=\$${prefix}/lib
+	  --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 
 build-indep:
 

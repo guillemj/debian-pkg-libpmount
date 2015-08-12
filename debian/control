@@ -11,6 +11,7 @@ Standards-Version: 3.9.6
 Package: libpmount-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libpmount0 (= ${binary:Version}), ${misc:Depends}
 Description: portable mount library - development files
  This library implements functions pmount() and pumount() as wrappers to
@@ -24,6 +25,7 @@ Description: portable mount library - development files
 
 Package: libpmount0
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: portable mount library - shared library
  This library implements functions pmount() and pumount() as wrappers to
