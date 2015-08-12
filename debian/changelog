@@ -12,6 +12,8 @@ libpmount (0.0.17-1) UNRELEASED; urgency=low
   * Now using Standards-Version 3.9.6 (no changes needed).
   * Add upstream Homepage field.
   * Add a watch file.
+  * Update packaging Vcs field URLs to their new location, and switch to
+    use the cgit web interface.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 12 Aug 2015 23:26:00 +0200
 
