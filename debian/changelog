@@ -9,6 +9,7 @@ libpmount (0.0.17-1) UNRELEASED; urgency=low
   * Remove packaging history from debian/copyright.
   * Switch debian/copyright to machine-readable format 1.0.
   * Switch to debhelper compatibility level 9.
+  * Now using Standards-Version 3.9.6 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Wed, 12 Aug 2015 23:26:00 +0200
 
