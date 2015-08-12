@@ -1,0 +1,4 @@
+# Site			Directory	Pattern			Version	Script
+version=3
+opts=pgpsigurlmangle=s/$/.asc/ \
+http://archive.hadrons.org/software/libpmount/	libpmount-([\d\.-]*)\.tar\.[gx]z	debian	uupdate
