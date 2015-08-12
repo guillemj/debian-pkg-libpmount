@@ -1,39 +1,67 @@
 #!/usr/bin/make -f
-# Sample debian/rules that uses debhelper.
-# GNU copyright 1997 to 1999 by Joey Hess.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
+
+DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 
 CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS)
 CFLAGS := -Wall $(shell dpkg-buildflags --get CFLAGS)
 LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS)
 
+ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
+	confflags += --build=$(DEB_HOST_GNU_TYPE)
+else
+	confflags += --build=$(DEB_BUILD_GNU_TYPE) --host=$(DEB_HOST_GNU_TYPE)
+endif
+
+D := $(CURDIR)/debian/tmp
+
+config.status: configure
+	dh_testdir
+
+	./configure \
+	  CPPFLAGS="$(CPPFLAGS)" \
+	  CFLAGS="$(CFLAGS)" \
+	  LDFLAGS="$(LDFLAGS)" \
+	  $(confflags) \
+	  --disable-silent-rules \
+	  --prefix=/usr \
+	  --libdir=\$${prefix}/lib
+
 build-indep:
 
-build-arch:
+build-arch: config.status
 	dh_testdir
-	
-	$(MAKE) build \
-	  CPPFLAGS="$(CPPFLAGS)" CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
+
+	$(MAKE)
 
 build: build-indep build-arch
+
+# Run the test suites
+check-arch: build-arch
+	dh_testdir
+
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	$(MAKE) check
+endif
 
 clean:
 	dh_testdir
 	dh_testroot
-	
-	$(MAKE) clean
-	
+
+	[ ! -f Makefile ] || $(MAKE) distclean
+
 	dh_clean
 
-install-arch: build-arch
+install-arch: check-arch
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	
-	$(MAKE) install DESTDIR="$(CURDIR)/debian/tmp"
+
+	$(MAKE) install DESTDIR=$(D)
 
 .PHONY: build-indep build-arch build install-arch clean
 

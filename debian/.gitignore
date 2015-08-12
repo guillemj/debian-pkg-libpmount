@@ -4,4 +4,4 @@ files
 *.substvars
 tmp/
 libpmount-dev/
-libpmount0.0/
+libpmount0/

@@ -1,0 +1,2 @@
+libpmount.so.0 libpmount0 #MINVER#
+ (symver)LIBPMOUNT_0.0 0.0.7
