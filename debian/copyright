@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: http://archive.hadrons.org/software/libpmount/
+Source: https://archive.hadrons.org/software/libpmount/
 Upstream-Name: libpmount
 Upstream-Contact: Guillem Jover <guillem@hadrons.org>
 
