@@ -1,11 +1,11 @@
-libpmount (0.0.17-2) UNRELEASED; urgency=medium
+libpmount (0.0.17-2) unstable; urgency=medium
 
   * Use https for hadrons.org URLs.
   * Now using Standards-Version 3.9.8 (no changes needed).
   * Switch to the dpkg makefile fragments in debian/rules.
   * Enable hardening bindnow feature.
 
- -- Guillem Jover <guillem@debian.org>  Sat, 05 Dec 2015 16:47:32 +0100
+ -- Guillem Jover <guillem@debian.org>  Tue, 31 May 2016 19:51:50 +0200
 
 libpmount (0.0.17-1) unstable; urgency=low
 
