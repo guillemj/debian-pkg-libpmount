@@ -6,13 +6,18 @@ Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/libpmount.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/libpmount.git
 Homepage: https://www.hadrons.org/software/libpmount/
 Standards-Version: 4.1.1
-Build-Depends: dpkg-dev (>= 1.15.7), debhelper (>= 9), genisoimage
+Build-Depends:
+ dpkg-dev (>= 1.15.7),
+ debhelper (>= 9),
+ genisoimage,
 
 Package: libpmount-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libpmount0 (= ${binary:Version}), ${misc:Depends}
+Depends:
+ libpmount0 (= ${binary:Version}),
+ ${misc:Depends},
 Description: portable mount library - development files
  This library implements functions pmount() and pumount() as wrappers to
  the real mount/unmount unportable interfaces on each platform.
@@ -26,7 +31,9 @@ Description: portable mount library - development files
 Package: libpmount0
 Architecture: any
 Multi-Arch: same
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
 Description: portable mount library - shared library
  This library implements functions pmount() and pumount() as wrappers to
  the real mount/unmount unportable interfaces on each platform.
