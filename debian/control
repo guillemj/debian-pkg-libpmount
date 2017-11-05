@@ -6,6 +6,7 @@ Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/libpmount.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/libpmount.git
 Homepage: https://www.hadrons.org/software/libpmount/
 Standards-Version: 4.1.1
+Rules-Requires-Root: no
 Build-Depends:
  dpkg-dev (>= 1.15.7),
  debhelper (>= 10),
