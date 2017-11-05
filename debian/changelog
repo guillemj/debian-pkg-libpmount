@@ -1,4 +1,4 @@
-libpmount (0.0.17-3) UNRELEASED; urgency=medium
+libpmount (0.0.17-3) unstable; urgency=medium
 
   * Now using Standards-Version 4.1.1 (no changes needed).
   * Line-wrap fields in debian/control.
@@ -7,7 +7,7 @@ libpmount (0.0.17-3) UNRELEASED; urgency=medium
   * Switch from debhelper deprecated option -s to -a.
   * Set Rules-Requires-Root to no.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 05:06:05 +0100
+ -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 05:10:59 +0100
 
 libpmount (0.0.17-2) unstable; urgency=medium
 
