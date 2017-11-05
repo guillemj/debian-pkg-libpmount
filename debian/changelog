@@ -2,6 +2,7 @@ libpmount (0.0.17-3) UNRELEASED; urgency=medium
 
   * Now using Standards-Version 4.1.1 (no changes needed).
   * Line-wrap fields in debian/control.
+  * Switch to debhelper compatibility level 10.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 05:06:05 +0100
 
