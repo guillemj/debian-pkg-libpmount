@@ -1,3 +1,15 @@
+libpmount (0.0.18-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+    - Switch to https for hadrons.org URLs.
+    - Include <sys/sysmacros.h> for major() declaration. Closes: #915428
+    - On Linux, avoid a TOCTOU in __findloop() with stat() by using fstat().
+    - On Linux, always NUL-terminate the string copied with strncpy().
+    - On Linux, completely rework and fix error handling.
+    - Completely rework mtab handling.
+
+ -- Guillem Jover <guillem@debian.org>  Wed, 12 Dec 2018 02:25:15 +0100
+
 libpmount (0.0.17-3) unstable; urgency=medium
 
   * Now using Standards-Version 4.1.1 (no changes needed).
