@@ -10,6 +10,7 @@ libpmount (0.0.18-1) UNRELEASED; urgency=medium
   * Switch to debhelper compatibility level 11.
   * Now using Standards-Version 4.2.1 (no changes needed).
   * Remove ancient Build-Depends on dpkg-dev.
+  * Add <!nocheck> build profile to genisoimage Build-Depends.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 12 Dec 2018 02:25:15 +0100
 
