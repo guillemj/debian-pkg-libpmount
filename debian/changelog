@@ -11,6 +11,7 @@ libpmount (0.0.18-1) UNRELEASED; urgency=medium
   * Now using Standards-Version 4.2.1 (no changes needed).
   * Remove ancient Build-Depends on dpkg-dev.
   * Add <!nocheck> build profile to genisoimage Build-Depends.
+  * Add e2fsprogs explicitly to Build-Depends now that it is not Essential.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 12 Dec 2018 02:25:15 +0100
 
