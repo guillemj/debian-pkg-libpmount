@@ -1,4 +1,4 @@
-libpmount (0.0.18-1) UNRELEASED; urgency=medium
+libpmount (0.0.18-1) unstable; urgency=medium
 
   * New upstream release.
     - Switch to https for hadrons.org URLs.
@@ -13,7 +13,7 @@ libpmount (0.0.18-1) UNRELEASED; urgency=medium
   * Add <!nocheck> build profile to genisoimage Build-Depends.
   * Add e2fsprogs explicitly to Build-Depends now that it is not Essential.
 
- -- Guillem Jover <guillem@debian.org>  Wed, 12 Dec 2018 02:25:15 +0100
+ -- Guillem Jover <guillem@debian.org>  Wed, 12 Dec 2018 02:35:02 +0100
 
 libpmount (0.0.17-3) unstable; urgency=medium
 
